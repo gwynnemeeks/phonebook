@@ -13,6 +13,8 @@
         :items="phoneTypeOptions"
         v-model="form.type"
       />
+      <v-btn type="submit" color="pink" dark>Submit</v-btn>
+      <v-form @submit.prevent="handleSubmit"></v-form>
     </v-form>
   </div>
 </template>
@@ -30,6 +32,11 @@ export default {
       },
       phoneTypeOptions: ["Home", "Cell", "Office"],
     };
+  },
+  methods: {
+    handleSubmit() {
+      console.log(this.form);
+    },
   },
 };
 </script>
