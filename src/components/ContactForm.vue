@@ -5,7 +5,6 @@
       <v-text-field outlined label="First Name" v-model="form.firstName" />
       <v-text-field outlined label="Last Name" v-model="form.lastName" />
       <v-text-field type="number" outlined label="Phone" v-model="form.phone" />
-      <!-- TODO: phone type -->
       <v-text-field outlined label="Email" v-model="form.email" />
       <v-select
         outlined
@@ -36,10 +35,14 @@ export default {
   methods: {
     handleSubmit() {
       this.$emit("contact-submit", this.form);
-      // TODO: clear form fields
-    },
-  },
-};
+      this.form = {
+        firstName: "",
+        lastName: "",
+        phone: "",
+        type: "",
+        email: "",
+      },
+}
 </script>
 
 <style></style>
