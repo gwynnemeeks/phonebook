@@ -22,6 +22,7 @@ export default {
         type: "",
         email: "",
       },
+      phoneTypeOptions: ["Home", "Cell", "Office"],
     };
   },
 };
