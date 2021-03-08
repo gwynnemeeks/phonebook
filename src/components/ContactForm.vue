@@ -1,7 +1,9 @@
 <template>
   <div>
     <h3 class="teal--text">New Contact</h3>
-    <v-form></v-form>
+    <v-form>
+        <v-text-field outlined label="First Name" v-model="form.firstName" />
+    </v-form>
   </div>
 </template>
 
