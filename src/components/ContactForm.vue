@@ -7,6 +7,12 @@
       <v-text-field type="number" outlined label="Phone" v-model="form.phone" />
       <!-- TODO: phone type -->
       <v-text-field outlined label="Email" v-model="form.email" />
+      <v-select
+        outlined
+        label="Phone Type"
+        :items="phoneTypeOptions"
+        v-model="form.type"
+      />
     </v-form>
   </div>
 </template>
@@ -22,6 +28,7 @@ export default {
         type: "",
         email: "",
       },
+      phoneTypeOptions: ["Home", "Cell", "Office"],
     };
   },
 };
