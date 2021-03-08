@@ -35,7 +35,8 @@ export default {
   },
   methods: {
     handleSubmit() {
-      console.log(this.form);
+      this.$emit("contact-submit", this.form);
+      // TODO: clear form fields
     },
   },
 };
