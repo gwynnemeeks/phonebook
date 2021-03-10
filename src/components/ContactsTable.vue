@@ -12,7 +12,12 @@
           </tr>
         </thead>
         <tbody>
-          <!-- TODO: Loop over contacts and display row for each -->
+          <tr v-for="contact in contacts" :key="contact.phone">
+            <td>{{ contact.firstName }} {{ contact.lastName }}</td>
+            <td>{{ contact.phone }}</td>
+            <td>{{ contact.type }}</td>
+            <td>{{ contact.email }}</td>
+          </tr>
         </tbody>
       </template>
     </v-simple-table>
