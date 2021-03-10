@@ -16,6 +16,10 @@ export default {
       contacts: [],
     };
   },
+  mounted() {
+    const existingContacts = JSON.parse(localStorage.getItem("contacts"));
+    this.contacts = existingContacts || [];
+  },
   methods: {
     addContact(newContact) {
       this.contacts.push(newContact);
