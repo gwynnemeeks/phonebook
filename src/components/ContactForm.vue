@@ -31,7 +31,8 @@ export default {
       },
       phoneTypeOptions: ["Home", "Cell", "Office"],
     };
-  },
+  }
+  };
   methods: {
     handleSubmit() {
       this.$emit("contact-submit", this.form);
@@ -40,9 +41,10 @@ export default {
         lastName: "",
         phone: "",
         type: "",
-        email: "",
-      },
-}
+        email: ""
+        };
+      }
+    }
 </script>
 
 <style></style>
