@@ -1,5 +1,5 @@
 <template>
-  <contact-form />
+  <contact-form @contact-submit="addContact" />
 </template>
 
 <script>
@@ -11,6 +11,11 @@ export default {
     return {
       contacts: [],
     };
+  },
+  methods: {
+    addContact(newContact) {
+      this.contacts.push(newContact);
+    },
   },
 };
 </script>
