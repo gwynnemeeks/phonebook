@@ -1,12 +1,16 @@
 <template>
-  <contact-form @contact-submit="addContact" />
+  <div>
+    <contacts-table :contacts="contacts" />
+    <contact-form @contact-submit="addContact" />
+  </div>
 </template>
 
 <script>
 import ContactForm from "./ContactForm.vue";
+import ContactsTable from "./ContactsTable.vue";
 
 export default {
-  components: { ContactForm },
+  components: { ContactForm, ContactsTable },
   data() {
     return {
       contacts: [],
